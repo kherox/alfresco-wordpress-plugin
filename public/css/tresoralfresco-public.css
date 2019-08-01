@@ -1,0 +1,274 @@
+.ffolder{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.ffolder.small{
+  margin-top: 8px;
+  width: 88px;
+  height: 61px;
+  border-radius: 0px 6px 6px 6px;
+}
+
+.ffolder.medium{
+  margin-top: 16px;
+  width: 176px;
+  height: 122px;
+  border-radius: 0px 10px 10px 10px;
+}
+
+.ffolder.big{
+  margin-top: 24px;
+  width: 264px;
+  height: 183px;
+  border-radius: 0px 14px 14px 14px;
+}
+
+.ffolder:before{
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.ffolder:after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.ffolder.small:before{
+  top:-8px;
+  left: 0;
+  width: 32px;
+  height: 8px;
+  border-radius: 6px 0px 0px 0px;
+}
+
+.ffolder.small:after{
+  top:-16px;
+  left: 24px;
+  border: 8px solid transparent;
+}
+
+
+.ffolder.medium:before{
+  top:-16px;
+  left: 0;
+  width: 64px;
+  height: 16px;
+  border-radius: 10px 0px 0px 0px;
+}
+
+.ffolder.medium:after{
+  top:-32px;
+  left: 48px;
+  border: 16px solid transparent;
+}
+
+.ffolder.big:before{
+  top:-24px;
+  left: 0;
+  width: 96px;
+  height: 24px;
+  border-radius: 14px 0px 0px 0px;
+}
+
+.ffolder.big:after{
+  top:-48px;
+  left: 72px;
+  border: 24px solid transparent;
+}
+
+.ffolder span, .ffolder i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ffolder span{
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 15px;
+  white-space: nowrap;
+}
+
+.ffolder.small i{ font-size: 37px;}
+.ffolder.medium i{ font-size: 53px;}
+.ffolder.big i{ font-size: 53px;}
+
+
+/*Available colors*/
+.ffolder.cyan{ background-color: #23CBF4;}
+.ffolder.cyan:before, .ffolder.cyan span{ background-color: #06BAEE;}
+.ffolder.cyan:after{ border-bottom-color: #06BAEE;}
+.ffolder.cyan span{color: #FFFFFF;}
+.ffolder.cyan i{color: #06BAEE;}
+
+.ffolder.yellow{ background-color: #FFBD00;}
+.ffolder.yellow:before, .ffolder.yellow span{ background-color: #F1A402;}
+.ffolder.yellow:after{ border-bottom-color: #F1A402;}
+.ffolder.yellow span{color: #FFFFFF;}
+.ffolder.yellow i{color: #F1A402;}
+
+.ffolder.pink{ background-color: #FF7F92;}
+.ffolder.pink:before, .ffolder.pink span{ background-color: #FF5E6E;}
+.ffolder.pink:after{ border-bottom-color: #FF5E6E;}
+.ffolder.pink span{color: #FFFFFF;}
+.ffolder.pink i{color: #FF5E6E;}
+
+.ffolder.green{ background-color: #62DE82;}
+.ffolder.green:before, .ffolder.green span{ background-color: #66CA7F;}
+.ffolder.green:after{ border-bottom-color: #66CA7F;}
+.ffolder.green span{background-color: transparent;}
+.ffolder.green i{color: #54C170;}
+
+.ffolder.gray{ background-color: #829aa8;}
+.ffolder.gray:before, .ffolder.gray span{ background-color: #687F8C;}
+.ffolder.gray:after{ border-bottom-color: #687F8C;}
+.ffolder.gray span{background-color: transparent;}
+.ffolder.gray i{color: #687F8C;}
+
+
+@charset "utf-8";
+/*! fileicon.css v0.1.1 | MIT License | github.com/picturepan2/fileicon.css */
+/* fileicon.basic */
+.file-icon {
+  font-family: Arial, Tahoma, sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  width: 24px;
+  height: 32px;
+  background: #018fef;
+  position: relative;
+  border-radius: 2px;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+.file-icon::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom-left-radius: 2px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff #fff rgba(255,255,255,.35) rgba(255,255,255,.35);
+}
+.file-icon::after {
+  display: block;
+  content: attr(data-type);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 10px;
+  color: #fff;
+  text-transform: lowercase;
+  width: 100%;
+  padding: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* fileicons */
+.file-icon-xs {
+  width: 12px;
+  height: 16px;
+  border-radius: 2px;
+}
+.file-icon-xs::before {
+  border-bottom-left-radius: 1px;
+  border-width: 3px;
+}
+.file-icon-xs::after {
+  content: "";
+  border-bottom: 2px solid rgba(255,255,255,.45);
+  width: auto;
+  left: 2px;
+  right: 2px;
+  bottom: 3px;
+}
+.file-icon-sm {
+  width: 18px;
+  height: 24px;
+  border-radius: 2px;
+}
+.file-icon-sm::before {
+  border-bottom-left-radius: 2px;
+  border-width: 4px;
+}
+.file-icon-sm::after {
+  font-size: 7px;
+  padding: 2px;
+}
+.file-icon-lg {
+  width: 48px;
+  height: 64px;
+  border-radius: 3px;
+}
+.file-icon-lg::before {
+  border-bottom-left-radius: 2px;
+  border-width: 8px;
+}
+.file-icon-lg::after {
+  font-size: 16px;
+  padding: 4px 6px;
+}
+.file-icon-xl {
+  width: 96px;
+  height: 128px;
+  border-radius: 4px;
+}
+.file-icon-xl::before {
+  border-bottom-left-radius: 4px;
+  border-width: 16px;
+}
+.file-icon-xl::after {
+  font-size: 24px;
+  padding: 4px 10px;
+}
+/* fileicon.types */
+.file-icon[data-type=zip],
+.file-icon[data-type=rar] {
+  background: #acacac;
+}
+.file-icon[data-type^=doc] {
+  background: #307cf1;
+}
+.file-icon[data-type^=xls] {
+  background: #0f9d58;
+}
+.file-icon[data-type^=ppt] {
+  background: #d24726;
+}
+.file-icon[data-type=pdf] {
+  background: #e13d34;
+}
+.file-icon[data-type=txt] {
+  background: #5eb533;
+}
+.file-icon[data-type=mp3],
+.file-icon[data-type=wma],
+.file-icon[data-type=m4a],
+.file-icon[data-type=flac] {
+  background: #8e44ad;
+}
+.file-icon[data-type=mp4],
+.file-icon[data-type=wmv],
+.file-icon[data-type=mov],
+.file-icon[data-type=avi],
+.file-icon[data-type=mkv] {
+  background: #7a3ce7;
+}
+.file-icon[data-type=bmp],
+.file-icon[data-type=jpg],
+.file-icon[data-type=jpeg],
+.file-icon[data-type=gif],
+.file-icon[data-type=png] {
+  background: #f4b400;
+}
